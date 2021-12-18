@@ -1,0 +1,42 @@
+[
+  {
+    "animals": {
+      "cheetah": {
+        "kind": "big cats",
+        "name": "Cheetah"
+      },
+      "lion": {
+        "kind": "big cats",
+        "name": "Lion"
+      },
+      "leopard": {
+        "kind": "big cats",
+        "name": "Leopard"
+      },
+      "puma": {
+        "kind": "big cats",
+        "name": "Puma"
+      }
+    },
+    "cities": {
+      "new_york": {
+        "kind": "big cities",
+        "name": "New York"
+      },
+      "athens": {
+        "kind": "ancient cities",
+        "name": "athens"
+      }
+    },
+    "music": {
+      "dark_side_of_the_moon": {
+        "kind": "progressive rock",
+        "name": "Dark Side of The Moon"
+      },
+      "thin_lizzy": {
+        "kind": "Rock and Roll",
+        "name": "Thin Lizzy"
+      }
+    }
+  }
+]
