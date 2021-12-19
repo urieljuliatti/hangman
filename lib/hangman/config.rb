@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class Config
+module Hangman
+  class Config
 
   class << self
     def greetings
@@ -18,4 +19,5 @@ class Config
     end
     
   end
+end
 end

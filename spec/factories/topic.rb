@@ -5,6 +5,6 @@ FactoryBot.define do
     subject { 'animals' }
     keyword { 'cheetah' }
     kind { 'big cats' }
-    word { 'Cheetah' }
+    name { 'Cheetah' }
   end
 end

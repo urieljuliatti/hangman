@@ -7,11 +7,12 @@ RSpec.describe Entities::Topic do
     it { is_expected.to have_attributes(subject: 'animals') }
     it { is_expected.to have_attributes(keyword: 'cheetah') }
     it { is_expected.to have_attributes(kind: 'big cats') }
-    it { is_expected.to have_attributes(word: 'Cheetah') }
+    it { is_expected.to have_attributes(name: 'Cheetah') }
   end
 
   describe '.display' do
     subject(:display) { topic.display }
+    
     it { is_expected.to eq('[subject]: animals and [kind]: big cats') }
   end
 end

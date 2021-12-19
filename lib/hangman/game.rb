@@ -1,25 +1,17 @@
 # frozen_string_literal: true
 
-module Game
-  def init; end
+module Hangman
+  class Game
+    class << self
+      def init; end
 
-  def mistakes
-    []
-  end
+      def mistakes
+        []
+      end
 
-  def successes
-    []
-  end
-
-  def choose(letter); end
-
-  class Word
-    # include String
-
-    def has_letter?; end
-
-    def match(input)
-      word.eql?(input)
+      def successes
+        []
+      end
     end
   end
 end

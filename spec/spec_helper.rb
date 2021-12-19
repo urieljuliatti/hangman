@@ -1,8 +1,9 @@
-require_relative '../lib/hangman/base'
-require_relative '../lib/hangman/config'
-require_relative '../lib/repositories/repo_file'
-require_relative '../lib/repositories/topic'
-require_relative '../lib/entities/topic'
+# frozen_string_literal: true
+
+require './lib/repositories/repo_file'
+require './lib/repositories/topic'
+require './lib/entities/topic'
+require './lib/hangman/config'
 
 require 'awesome_print'
 require 'factory_bot'

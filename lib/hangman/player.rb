@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-class Player
+module Hangman
+  class Player
 
   def initialize
 
   end
+end
 end
