@@ -3,21 +3,27 @@
 module Hangman
   class Config
 
-  class << self
-    def greetings
-      puts 'Welcome to hangman!'
-      puts 'Do you want to initialize the game? (Type y to begin)'
-      if gets.chomp.to_s.upcase == 'y'
-        Game.init
-      else
-        exit
-      end
+    def initialize(topic)
+      @topic = topic
+      @settings = {}
     end
 
-    def prepare
-      # pick up the topic + word
+    def settings
+      @settings = {topic: @topic}
     end
-    
+
+    class << self
+      @settings = {}
+
+      def greetings
+        puts 'Welcome to hangman!'
+        puts 'Do you want to initialize the game? (Type y to begin)'
+        if gets.chomp.to_s.upcase == 'y'
+          Game.init
+        else
+          exit
+        end
+      end
+    end
   end
-end
 end

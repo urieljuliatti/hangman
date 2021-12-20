@@ -3,6 +3,7 @@
 require './lib/repositories/repo_file'
 require './lib/repositories/topic'
 require './lib/entities/topic'
+require './lib/entities/word'
 require './lib/hangman/config'
 
 require 'awesome_print'

@@ -9,12 +9,14 @@ module Repositories
     def initialize
       @topic_entity = Entities::Topic.new
     end
-
+    
+    # TODO: uma forma dde fazer com métodos de classe
     def selected_topic
       @selected_topic ||= select_topic
     end
 
     def select_topic
+      # TODO: uma forma dde fazer com métodos de classe
       collection.each_key do |key|
         @topic_entity.subject = SUBJECT if key.eql?(SUBJECT)
         collection[key].each do |kw, value|
