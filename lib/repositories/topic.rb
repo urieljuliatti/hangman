@@ -8,21 +8,23 @@ module Repositories
   class Topic
     def initialize
       @topic_entity = Entities::Topic.new
+      randomized
     end
-    
+
     # TODO: uma forma dde fazer com métodos de classe
     def selected_topic
       @selected_topic ||= select_topic
     end
 
     def select_topic
+      p randomized
       # TODO: uma forma dde fazer com métodos de classe
       collection.each_key do |key|
-        @topic_entity.subject = SUBJECT if key.eql?(SUBJECT)
+        @topic_entity.subject = randomized[:subject] if key.eql?(randomized[:subject])
         collection[key].each do |kw, value|
-          next unless kw.eql?(KEYWORD)
+          next unless kw.eql?(randomized[:keyword])
 
-          @topic_entity.keyword = KEYWORD
+          @topic_entity.keyword = randomized[:keyword]
           @topic_entity.kind = value['kind']
           @topic_entity.name = value['name']
         end
@@ -34,17 +36,27 @@ module Repositories
       @collection ||= RepoFile.all
     end
 
-    class << self
-      # expose collection to constants
-      def collection
-        RepoFile.all
-      end
+    def randomized
+      @randomized ||= random
     end
 
-    # Randomized value for each game
-    RANDOM_SUBJECT_ID = (rand 0..collection.length - 1).freeze
-    RANDOM_KEYWORD_ID = (rand 0..collection.values[RANDOM_SUBJECT_ID].length - 1).freeze
-    KEYWORD = collection.values[RANDOM_SUBJECT_ID].keys[RANDOM_KEYWORD_ID].freeze
-    SUBJECT = collection.keys[RANDOM_SUBJECT_ID].freeze
+    private
+
+    def random
+      @randomized = {}
+      #srand(777)
+      random_subject_id = (rand 0..collection.length - 1)
+      randon_keyword_id = (rand 0..collection.values[random_subject_id].length - 1)
+      keyword = collection.values[random_subject_id].keys[randon_keyword_id]
+      subject = collection.keys[random_subject_id]
+      @randomized = {
+        random_subject_id: random_subject_id,
+        randon_keyword_id: randon_keyword_id,
+        keyword: keyword,
+        subject: subject
+      }
+    end
+
+
   end
 end

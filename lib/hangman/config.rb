@@ -3,14 +3,8 @@
 module Hangman
   class Config
 
-    def initialize(topic)
-      @topic = topic
-      @settings = {}
-    end
-
-    def settings
-      @settings = {topic: @topic}
-    end
+    #https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassVars
+    @@settings = {}
 
     class << self
       @settings = {}
@@ -23,6 +17,10 @@ module Hangman
         else
           exit
         end
+      end
+
+      def settings(topic)
+        @@settings = {topic: topic}
       end
     end
   end
