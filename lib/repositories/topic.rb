@@ -17,8 +17,6 @@ module Repositories
     end
 
     def select_topic
-      p randomized
-      # TODO: uma forma dde fazer com métodos de classe
       collection.each_key do |key|
         @topic_entity.subject = randomized[:subject] if key.eql?(randomized[:subject])
         collection[key].each do |kw, value|
@@ -44,14 +42,13 @@ module Repositories
 
     def random
       @randomized = {}
-      #srand(777)
       random_subject_id = (rand 0..collection.length - 1)
-      randon_keyword_id = (rand 0..collection.values[random_subject_id].length - 1)
-      keyword = collection.values[random_subject_id].keys[randon_keyword_id]
+      random_keyword_id = (rand 0..collection.values[random_subject_id].length - 1)
+      keyword = collection.values[random_subject_id].keys[random_keyword_id]
       subject = collection.keys[random_subject_id]
       @randomized = {
         random_subject_id: random_subject_id,
-        randon_keyword_id: randon_keyword_id,
+        random_keyword_id: random_keyword_id,
         keyword: keyword,
         subject: subject
       }
