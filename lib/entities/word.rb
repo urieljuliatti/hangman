@@ -2,6 +2,7 @@
 
 module Entities
   module Word
+=begin
     class << self
       def letters
         Repositories::Topic::KEYWORD.split('')
@@ -11,5 +12,6 @@ module Entities
         letters.include?(letter)
       end
     end
+=end
   end
 end

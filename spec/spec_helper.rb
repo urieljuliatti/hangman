@@ -5,6 +5,7 @@ require './lib/repositories/topic'
 require './lib/entities/topic'
 require './lib/entities/word'
 require './lib/hangman/config'
+require './lib/hangman/game'
 
 require 'awesome_print'
 require 'factory_bot'

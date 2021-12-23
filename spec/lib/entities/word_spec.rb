@@ -19,12 +19,12 @@ RSpec.describe Entities::Word do
   describe '#letters' do
     subject { described_class.letters }
 
-    it { is_expected.to match_array(letters) }
+    xit { is_expected.to match_array(letters) }
   end
 
   describe '#inclued?' do
     subject { described_class.include?(letter) }
 
-    it { is_expected.to be_truthy }
+    xit { is_expected.to be_truthy }
   end
 end

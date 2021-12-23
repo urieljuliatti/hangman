@@ -38,6 +38,7 @@ module Repositories
       @randomized ||= random
     end
 
+
     private
 
     def random
@@ -53,7 +54,5 @@ module Repositories
         subject: subject
       }
     end
-
-
   end
 end
