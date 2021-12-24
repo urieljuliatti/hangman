@@ -2,6 +2,7 @@
 
 module Entities
   module Word
+    # TODO mudar para Keyword
 =begin
     class << self
       def letters
