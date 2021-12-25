@@ -31,10 +31,6 @@ module Repositories
       @topic_entity
     end
 
-    def collection
-      @collection ||= RepoFile.all
-    end
-
     def randomized
       @randomized ||= random
     end
@@ -50,6 +46,10 @@ module Repositories
     end
 
     private
+    
+    def collection
+      RepoFile.all
+    end
 
     def random
       @randomized = {}

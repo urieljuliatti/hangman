@@ -5,8 +5,12 @@ module Hangman
   # O topic escolhido, por exemplo
   module Config
     @@settings = {}
+
     class << self
-      def setup(topic, game)
+
+      def setup
+        topic = Repositories::Topic.new
+        game = Hangman::Game.new(topic.select_topic_entity)
         @@settings[:topic] = topic
         @@settings[:game] = game
         @@settings
@@ -14,6 +18,10 @@ module Hangman
 
       def settings
         @@settings
+      end
+
+      def game
+        @@settings[:game]
       end
 
       def greetings
@@ -25,6 +33,7 @@ module Hangman
           exit
         end
       end
+
     end
   end
 end

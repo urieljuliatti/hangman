@@ -23,24 +23,28 @@ module Hangman
       if included?(letter)
         search_and_index(letter)
         @successes.push(letter)
-        # verifica se venceu
       else
         @mistakes.push(letter)
-        # verifica se perdeu
       end
+    end
+
+    def game_over?
+      @mistakes.length == 7
+    end
+
+    def won?
+      indexed_keyword.all? { |_k, v| !v.nil? }
     end
 
     def hangman
       errors = {
-        1 => pole,
-        2 => head,
-        3 => body,
-        4 => left_arm,
-        5 => arms,
-        6 => left_leg,
-        7 => legs
+        0 => pole,
+        1 => head,
+        2 => body,
+        3 => arms,
+        4 => legs
       }
-      mistakes.length each {|index| puts errors[index] }
+      errors.each_with_index { |_item, index| puts errors[index] }
     end
 
     attr_reader :mistakes, :selected_topic_entity, :successes
