@@ -32,7 +32,7 @@ RSpec.describe Repositories::Topic do
 
   describe '.selected_topic' do
     context 'when strtuct is filled in properly' do
-      subject(:selected_topic) { topic.selected_topic }
+      subject(:selected_topic_entity) { topic.selected_topic_entity }
 
       it { is_expected.to have_attributes topic_attributes }
     end
@@ -40,7 +40,7 @@ RSpec.describe Repositories::Topic do
 
   describe '.select_topic' do
     context 'when random topic is generated' do
-      subject(:selected_topic) { topic.select_topic }
+      subject(:selected_topic_entity) { topic.select_topic_entity }
 
       it { is_expected.to eql selected_entity }
     end

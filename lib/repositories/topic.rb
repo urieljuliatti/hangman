@@ -6,17 +6,18 @@ require_relative '../entities/topic'
 module Repositories
   # topic reposiory query class
   class Topic
-    def initialize
+    def initialize(rspec_flag: false)
+      @rspec_flag = rspec_flag
       @topic_entity = Entities::Topic.new
-      randomized
+      rspec_flag ? build_cheetah : randomized
     end
 
-    # TODO: uma forma dde fazer com métodos de classe
-    def selected_topic
-      @selected_topic ||= select_topic
+    def selected_topic_entity
+      @selected_topic_entity ||= rspec_flag ? build_cheetah : select_topic_entity
     end
 
-    def select_topic
+    # TODO: mover para um módulo
+    def select_topic_entity
       collection.each_key do |key|
         @topic_entity.subject = randomized[:subject] if key.eql?(randomized[:subject])
         collection[key].each do |kw, value|
@@ -38,6 +39,17 @@ module Repositories
       @randomized ||= random
     end
 
+    attr_reader :rspec_flag
+
+    def build_cheetah
+      # find by key
+      #cheetah = collection
+      @topic_entity.subject = 'animals'
+      @topic_entity.keyword = 'cheetah'
+      @topic_entity.kind = 'big cats'
+      @topic_entity.name = 'Cheetah'
+      @topic_entity
+    end
 
     private
 

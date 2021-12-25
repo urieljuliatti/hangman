@@ -3,23 +3,27 @@
 module Hangman
   # @selected_topic_entity is an instance of TopicEntity
   class Game
-    include Entities::Keywordable # fornece métodos para tratamento das palavras, string, etc
-    #include Entities::Orchestrable # orquestra o jogo num geral
+    # Fornece métodos para tratamento da interação com a keyword através da letra fornecida
+    # Melhoria? Poderia ser incluido na Entity?
+    include Entities::Keywordable
+    #include Entities::Orchestrable # orquestra as interações do jogo
     #include Entities::Screenplayble # define o roteiro dos inputs
-    #include Entities::Displayable # monta o status do jogo de acordo com a instância, pode ser feito na ENTITY
-    
+    #include Entities::Displayable # monta o status do jogo
+
     def initialize(selected_topic_entity)
       @selected_topic_entity = selected_topic_entity
       @mistakes = []
       @successes = []
     end
 
-    # Move to Orchestrate
     def answer(letter)
       if included?(letter)
+        search_and_index(letter)
         @successes.push(letter)
+        # verifica se venceu
       else
         @mistakes.push(letter)
+        # verifica se perdeu
       end
     end
 
@@ -33,7 +37,7 @@ module Hangman
         6 => left_leg,
         7 => legs
       }
-      @mistakes.length each {|index| puts errors[index] }
+      mistakes.length each {|index| puts errors[index] }
     end
 
     attr_reader :mistakes, :selected_topic_entity, :successes

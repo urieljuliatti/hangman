@@ -1,13 +1,20 @@
 # frozen_string_literal: true
 
 module Hangman
-  class Config
-
-    #https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/ClassVars
+  # Responsável por carregar as informações iniciais do jogo
+  # O topic escolhido, por exemplo
+  module Config
     @@settings = {}
-
     class << self
-      @settings = {}
+      def setup(topic, game)
+        @@settings[:topic] = topic
+        @@settings[:game] = game
+        @@settings
+      end
+
+      def settings
+        @@settings
+      end
 
       def greetings
         puts 'Welcome to hangman!'
@@ -17,10 +24,6 @@ module Hangman
         else
           exit
         end
-      end
-
-      def settings(topic)
-        @@settings = {topic: topic}
       end
     end
   end

@@ -35,6 +35,7 @@ module Entities
     end
 
     def search_and_index(letter)
+      # TODO: essa lógica pode ser movida para a .answer
       return unless included?(letter) || taken?(letter)
 
       repeated_letters = repeated_letters(letter)
