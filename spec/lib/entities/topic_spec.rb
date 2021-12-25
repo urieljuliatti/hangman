@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe Entities::Topic do
   subject(:topic) { build(:topic) }
 

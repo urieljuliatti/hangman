@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe Repositories::Topic do
   subject(:topic) { described_class.new }
   let(:topic_double) { double("Repositories::Topic") }

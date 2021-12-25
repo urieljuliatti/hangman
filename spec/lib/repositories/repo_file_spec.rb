@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
+require 'spec_helper'
 
 RSpec.describe Repositories::RepoFile do
   subject(:repo_file) { described_class.new(file) }

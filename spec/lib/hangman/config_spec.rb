@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 # TODO: Aprimorar o STDIN e STDOUT com ruby e aplicar testes adequados
 
 RSpec.describe Hangman::Config do
