@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :topic, class: 'Entities::Topic' do
+  factory :topic_entity, class: 'Entities::Topic' do
     subject { 'animals' }
     keyword { 'cheetah' }
     kind { 'big cats' }

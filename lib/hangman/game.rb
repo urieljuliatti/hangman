@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
 module Hangman
+  # @selected_topic_entity is an instance of TopicEntity
   class Game
     include Entities::Keywordable # fornece métodos para tratamento das palavras, string, etc
     #include Entities::Orchestrable # orquestra o jogo num geral
     #include Entities::Screenplayble # define o roteiro dos inputs
     #include Entities::Displayable # monta o status do jogo de acordo com a instância, pode ser feito na ENTITY
-
-    def initialize(selected_topic)
-      @selected_topic = selected_topic
+    
+    def initialize(selected_topic_entity)
+      @selected_topic_entity = selected_topic_entity
       @mistakes = []
       @successes = []
     end
@@ -35,7 +36,7 @@ module Hangman
       @mistakes.length each {|index| puts errors[index] }
     end
 
-    attr_reader :mistakes, :selected_topic, :successes
+    attr_reader :mistakes, :selected_topic_entity, :successes
 
     private
 

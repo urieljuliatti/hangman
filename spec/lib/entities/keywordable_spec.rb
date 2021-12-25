@@ -3,9 +3,9 @@
 require 'spec_helper'
 
 RSpec.describe Entities::Keywordable do
-  let(:game) { Hangman::Game.new(selected_topic) { include Entities::Keywordable } }
+  let(:game) { Hangman::Game.new(selected_topic_entity) { include Entities::Keywordable } }
   # animals / cheetah
-  let(:selected_topic) { build(:topic) }
+  let(:selected_topic_entity) { build(:topic_entity) }
   let(:letter) { 'c' }
 
   describe '.included?' do
@@ -75,7 +75,6 @@ RSpec.describe Entities::Keywordable do
   end
 
   describe '.search_and_index' do
-    
     context 'when is invalid or not included' do
       subject(:search_and_index) { game.search_and_index('p') }
 
@@ -83,7 +82,6 @@ RSpec.describe Entities::Keywordable do
     end
 
     context 'when is already taken by mistaken/successes array' do
-      
     end
 
     context 'when indexes a single letter' do

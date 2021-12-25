@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Entities
+  # Everything depends on @selected_topic_entity (TopicEntity) to work
   module Keywordable
     def included?(letter)
       selected_topic_letters.include?(letter)
@@ -11,7 +12,7 @@ module Entities
     end
 
     def selected_topic_letters
-      selected_topic.keyword.split('')
+      selected_topic_entity.keyword.split('')
     end
 
     def repeated_letters(letter)

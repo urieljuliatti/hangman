@@ -4,8 +4,7 @@ require 'spec_helper'
 
 RSpec.describe Repositories::Topic do
   subject(:topic) { described_class.new }
-  let(:topic_double) { double("Repositories::Topic") }
-  let(:selected_entity) { build(:topic) }
+  let(:selected_entity) { build(:topic_entity) }
   let(:random_subject_id) { 0 }
   let(:random_keyword_id) { 0 }
   let(:subject_word) { 'animals' }

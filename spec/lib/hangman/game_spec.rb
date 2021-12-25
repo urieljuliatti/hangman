@@ -3,11 +3,11 @@
 require 'spec_helper'
 
 RSpec.describe Hangman::Game do
-  subject(:game) { described_class.new(selected_topic) }
+  subject(:game) { described_class.new(selected_topic_entity) }
 
   let(:letter) { 'c' }
   # animals / cheetah
-  let(:selected_topic) { build(:topic) }
+  let(:selected_topic_entity) { build(:topic_entity) }
 
   describe '.mistakes' do
     subject(:mistakes) { game.mistakes }
