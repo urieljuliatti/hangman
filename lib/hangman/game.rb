@@ -16,6 +16,7 @@ module Hangman
       @successes = []
     end
 
+    # TODO: Palavras com espaço
     def answer(letter)
       if included?(letter)
         search_and_index(letter)

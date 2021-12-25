@@ -42,12 +42,10 @@ module Repositories
     attr_reader :rspec_flag
 
     def build_cheetah
-      # find by key
-      #cheetah = collection
       @topic_entity.subject = 'animals'
-      @topic_entity.keyword = 'cheetah'
-      @topic_entity.kind = 'big cats'
-      @topic_entity.name = 'Cheetah'
+      @topic_entity.keyword = collection['animals'].keys.first
+      @topic_entity.kind = collection['animals']['cheetah']['kind']
+      @topic_entity.name = collection['animals']['cheetah']['name']
       @topic_entity
     end
 

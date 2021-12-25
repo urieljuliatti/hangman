@@ -22,6 +22,11 @@ module Entities
       repeated
     end
 
+    def whitespace
+    
+    end
+
+    # TODO: Contemplar espaços na keyword. O "_" facilita na detecção! O método whitespace dará conta
     def build_indexed_keyword
       indexed_keyword = {}
       selected_topic_entity_letters.each_index do |index|
