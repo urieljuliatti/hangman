@@ -75,15 +75,6 @@ RSpec.describe Entities::Keywordable do
   end
 
   describe '.search_and_index' do
-    context 'when is invalid or not included' do
-      subject(:search_and_index) { game.search_and_index('p') }
-
-      it { is_expected.to be_nil }
-    end
-
-    context 'when is already taken by mistaken/successes array' do
-    end
-
     context 'when indexes a single letter' do
       subject(:search_and_index) { game.search_and_index('a') }
 
@@ -120,7 +111,7 @@ RSpec.describe Entities::Keywordable do
       }
     end
 
-    context 'when indexes with multiple letters' do
+    context 'when indexes multiple letters' do
       subject(:search_and_index) { game.search_and_index('e') }
 
       before do

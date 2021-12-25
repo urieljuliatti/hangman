@@ -22,9 +22,7 @@ module Entities
       repeated
     end
 
-    def whitespace
-    
-    end
+    def whitespace; end
 
     # TODO: Contemplar espaços na keyword. O "_" facilita na detecção! O método whitespace dará conta
     def build_indexed_keyword
@@ -40,9 +38,6 @@ module Entities
     end
 
     def search_and_index(letter)
-      # TODO: essa lógica pode ser movida para a .answer
-      return unless included?(letter) || taken?(letter)
-
       repeated_letters = repeated_letters(letter)
       letters = selected_topic_entity_letters - repeated_letters[:letters]
 

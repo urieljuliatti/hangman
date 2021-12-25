@@ -45,6 +45,13 @@ RSpec.describe Hangman::Game do
   describe '.answer' do
     subject(:answer) { game.answer(letter) }
 
+    context 'when the letter is already taken' do
+      before do
+        game.answer('c')
+      end
+      it { is_expected.to be_nil }
+    end
+
     context 'when is mistaken' do
       let(:letter) { 'd' }
 

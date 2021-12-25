@@ -18,6 +18,8 @@ module Hangman
 
     # TODO: Palavras com espaço
     def answer(letter)
+      return if taken?(letter)
+
       if included?(letter)
         search_and_index(letter)
         @successes.push(letter)
