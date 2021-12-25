@@ -4,27 +4,27 @@ module Entities
   # Everything depends on @selected_topic_entity (TopicEntity) to work
   module Keywordable
     def included?(letter)
-      selected_topic_letters.include?(letter)
+      selected_topic_entity_letters.include?(letter)
     end
 
     def taken?(letter)
       mistakes.include?(letter) || successes.include?(letter)
     end
 
-    def selected_topic_letters
+    def selected_topic_entity_letters
       selected_topic_entity.keyword.split('')
     end
 
     def repeated_letters(letter)
       repeated = {}
-      repeated[:ids] = selected_topic_letters.each_index.select { |i| selected_topic_letters[i].eql?(letter) }
-      repeated[:letters] = repeated[:ids].map { |id| selected_topic_letters.fetch(id) }
+      repeated[:ids] = selected_topic_entity_letters.each_index.select { |i| selected_topic_entity_letters[i].eql?(letter) }
+      repeated[:letters] = repeated[:ids].map { |id| selected_topic_entity_letters.fetch(id) }
       repeated
     end
 
     def build_indexed_keyword
       indexed_keyword = {}
-      selected_topic_letters.each_index do |index|
+      selected_topic_entity_letters.each_index do |index|
         indexed_keyword[index] = nil
       end
       indexed_keyword
@@ -38,7 +38,7 @@ module Entities
       return unless included?(letter) || taken?(letter)
 
       repeated_letters = repeated_letters(letter)
-      letters = selected_topic_letters - repeated_letters[:letters]
+      letters = selected_topic_entity_letters - repeated_letters[:letters]
 
       if repeated_letters.count > 1
         repeated_letters[:ids].each_index do |i|

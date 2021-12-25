@@ -33,8 +33,8 @@ RSpec.describe Entities::Keywordable do
     end
   end
 
-  describe '.selected_topic_letters' do
-    subject { game.selected_topic_letters }
+  describe '.selected_topic_entity_letters' do
+    subject { game.selected_topic_entity_letters }
 
     it { is_expected.to_not be_empty }
     it { is_expected.to match_array %w[c h e e t a h] }
