@@ -22,10 +22,10 @@
     }
   },
   "cities": {
-    "new_york": {
-      "keyword": "new_york",
+    "cairo": {
+      "keyword": "cairo",
       "kind": "big cities",
-      "name": "New York"
+      "name": "Cairo"
     },
     "athens": {
       "keyword": "athens",
@@ -34,15 +34,15 @@
     }
   },
   "music": {
-    "dark_side_of_the_moon": {
-      "keyword": "dark_side_of_the_moon",
-      "kind": "progressive rock",
-      "name": "Dark Side of The Moon"
+    "thriller": {
+      "keyword": "thriller",
+      "kind": "Pop",
+      "name": "Thriller"
     },
-    "thin_lizzy": {
-      "keyword": "thin_lizzy",
+    "help": {
+      "keyword": "help",
       "kind": "Rock and Roll",
-      "name": "Thin Lizzy"
+      "name": "Help"
     }
   }
 }

@@ -2,38 +2,11 @@
 
 module Hangman
   # Responsável por carregar as informações iniciais do jogo
-  # O topic escolhido, por exemplo
   module Config
-    @@settings = {}
-
-    class << self
-
-      def setup
-        topic = Repositories::Topic.new
-        game = Hangman::Game.new(topic.select_topic_entity)
-        @@settings[:topic] = topic
-        @@settings[:game] = game
-        @@settings
-      end
-
-      def settings
-        @@settings
-      end
-
-      def game
-        @@settings[:game]
-      end
-
-      def greetings
-        puts 'Welcome to hangman!'
-        puts 'Do you want to initialize the game? (Type y to begin)'
-        if gets.chomp.to_s.upcase == 'y'
-          Game.init
-        else
-          exit
-        end
-      end
-
+    def self.build
+      topic = Repositories::Topic.new
+      game = Hangman::Game.new(topic.selected_topic_entity)
+      game.start
     end
   end
 end
