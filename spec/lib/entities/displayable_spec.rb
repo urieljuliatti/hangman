@@ -35,7 +35,6 @@ RSpec.describe Entities::Displayable do
 
     before do
       game.answer(letter)
-      game.indexed_keyword_display
     end
 
     it { is_expected.to eq "\e[40m\e [keyword]:  c   _   _   _   _   _   _  \e[0m" }

@@ -5,6 +5,7 @@ require './lib/repositories/topic'
 require './lib/entities/topic'
 require './lib/entities/keywordable'
 require './lib/entities/displayable'
+require './lib/entities/puppetable'
 require './lib/hangman/config'
 require './lib/hangman/game'
 

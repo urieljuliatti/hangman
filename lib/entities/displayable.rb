@@ -12,6 +12,7 @@ module Entities
       puts keyword_status
       puts successes_status
       puts mistakes_status
+      puts hangman
     end
 
     def answer_feedback(response)
@@ -36,6 +37,14 @@ module Entities
 
     def end_game_message
       won? ? 'You won!' : 'You lose!'
+    end
+
+    private
+
+    def indexed_keyword_display
+      display = []
+      indexed_keyword.each_value { |v| v.nil? ? display.push(' _ ') : display.push(" #{v} ") }
+      display.join(' ')
     end
   end
 end
