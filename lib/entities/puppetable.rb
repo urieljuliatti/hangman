@@ -16,9 +16,7 @@ module Entities
     end
 
     def hangman
-      status = []
-      length = mistakes.size
-      case length
+      case mistakes.size
       when 1
         puts pole
       when 2
@@ -47,8 +45,6 @@ module Entities
         puts arms
         puts legs
       end
-      #status.each { |s| puts s }
-      #puts status.join(' ')
     end
 
     private
