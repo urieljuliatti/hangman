@@ -33,6 +33,15 @@ RSpec.describe Entities::Keywordable do
     end
   end
 
+  describe '.whitespaces' do
+    context 'when return all whitespaces' do
+      let(:selected_topic_entity) { build(:topic_entity, :with_whitespace) }
+      subject { game.whitespaces }
+
+      it { is_expected.to include( { whitespace_indexes: [3] }) }
+    end
+  end
+
   describe '.selected_topic_entity_letters' do
     subject { game.selected_topic_entity_letters }
 

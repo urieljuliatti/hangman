@@ -32,6 +32,12 @@
       "kind": "ancient cities",
       "name": "athens"
     }
+    ,
+    "new_york": {
+      "keyword": "new_york",
+      "kind": "big cities",
+      "name": "New York"
+    }
   },
   "music": {
     "thriller": {

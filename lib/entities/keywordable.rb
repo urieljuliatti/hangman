@@ -17,18 +17,25 @@ module Entities
 
     def repeated_letters(letter)
       repeated = {}
-      repeated[:ids] = selected_topic_entity_letters.each_index.select { |i| selected_topic_entity_letters[i].eql?(letter) }
+      repeated[:ids] = selected_topic_entity_letters.each_index.select do |i|
+        selected_topic_entity_letters[i].eql?(letter)
+      end
       repeated[:letters] = repeated[:ids].map { |id| selected_topic_entity_letters.fetch(id) }
       repeated
     end
 
-    def whitespace; end
+    def whitespaces
+      spaces = {}
+      spaces[:whitespace_indexes] = selected_topic_entity_letters.each_index.select do |w|
+        selected_topic_entity_letters[w].eql?('_')
+      end
+      spaces
+    end
 
-    # TODO: Contemplar espaços na keyword. O "_" facilita na detecção! O método whitespace dará conta
     def build_indexed_keyword
       indexed_keyword = {}
-      selected_topic_entity_letters.each_index do |index|
-        indexed_keyword[index] = nil
+      selected_topic_entity_letters.each_with_index do |letter, index|
+        indexed_keyword[index] = nil unless letter.eql?('_')
       end
       indexed_keyword
     end

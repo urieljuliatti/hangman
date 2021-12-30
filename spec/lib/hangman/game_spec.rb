@@ -79,5 +79,59 @@ RSpec.describe Hangman::Game do
       it { is_expected.to contain_exactly('e') }
       it { is_expected.to match_array ['e'] }
     end
+
+    context 'when the word has whitespaces' do
+      let(:selected_topic_entity) { build(:topic_entity, :with_whitespace) }
+
+      let(:letter) { 'n' }
+
+      before do
+        answer
+        game.answer('e')
+        game.answer('w')
+        game.answer('y')
+        game.answer('o')
+        game.answer('r')
+        game.answer('k')
+      end
+
+      it { expect(game.successes).to_not be_empty }
+      it { expect(game.successes).to contain_exactly('n', 'e', 'w', 'y', 'o', 'r', 'k') }
+      it { expect(game.successes).to match_array %w[n e w y o r k] }
+      it { is_expected.to contain_exactly('n', 'e', 'w', 'y', 'o', 'r', 'k') }
+      it { is_expected.to match_array %w[n e w y o r k] }
+      it { expect(game.won?).to be_truthy }
+    end
+  end
+
+  describe '.won?' do
+    subject { game.game_over? }
+
+    before do
+      game.answer('w')
+      game.answer('f')
+      game.answer('g')
+      game.answer('j')
+      game.answer('m')
+      game.answer('n')
+      game.answer('v')
+    end
+
+    it { is_expected.to be_truthy }
+
+  end
+
+  describe '.game_over?' do
+    subject { game.won? }
+
+    before do
+      game.answer('e')
+      game.answer('h')
+      game.answer('c')
+      game.answer('a')
+      game.answer('t')
+    end
+
+    it { is_expected.to be_truthy }
   end
 end

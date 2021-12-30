@@ -6,5 +6,12 @@ FactoryBot.define do
     keyword { 'cheetah' }
     kind { 'big cats' }
     name { 'Cheetah' }
+
+    trait :with_whitespace do
+      subject { 'cities' }
+      keyword { 'new_york' }
+      kind { 'big cities' }
+      name { 'New York' }
+    end
   end
 end
