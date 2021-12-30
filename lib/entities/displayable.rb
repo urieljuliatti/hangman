@@ -43,7 +43,14 @@ module Entities
 
     def indexed_keyword_display
       display = []
-      indexed_keyword.each_value { |v| v.nil? ? display.push(' _ ') : display.push(" #{v} ") }
+      indexed_keyword.each do |k, v|
+        if v.nil?
+          display.push(' _ ')
+        else
+          display.push(" #{v} ")
+        end
+        display.insert((k - 1), ' ') if whitespaces[:whitespace_indexes].include?(k - 1) && !whitespaces.empty?
+      end
       display.join(' ')
     end
   end

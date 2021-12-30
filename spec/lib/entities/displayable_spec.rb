@@ -31,14 +31,29 @@ RSpec.describe Entities::Displayable do
   end
 
   describe '.keyword_status' do
-    subject { game.keyword_status }
+    context 'when keyword hasnt whitespace' do
+      subject { game.keyword_status }
 
-    before do
-      game.answer(letter)
+      before do
+        game.answer(letter)
+      end
+
+      it { is_expected.to eq "\e[40m\e [keyword]:  c   _   _   _   _   _   _  \e[0m" }
+      it { is_expected.to match(/c   _/) }
     end
 
-    it { is_expected.to eq "\e[40m\e [keyword]:  c   _   _   _   _   _   _  \e[0m" }
-    it { is_expected.to match(/c   _/) }
+    context 'when keyword has whitespace' do
+      let(:selected_topic_entity) { build(:topic_entity, :with_whitespace) }
+
+      subject { game.keyword_status }
+
+      before do
+        game.answer('n')
+        game.whitespaces
+      end
+
+      it { is_expected.to eq "\e[40m\e [keyword]:  n   _   _     _   _   _   _  \e[0m" }
+    end
   end
 
   describe '.successes_status' do

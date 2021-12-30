@@ -37,6 +37,11 @@
       "keyword": "new_york",
       "kind": "big cities",
       "name": "New York"
+    },
+    "ecatepec_de_morelos": {
+      "keyword": "ecatepec_de_morelos",
+      "kind": "small cities",
+      "name": "Ecatepec de Morelos"
     }
   },
   "music": {
