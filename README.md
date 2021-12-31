@@ -3,7 +3,7 @@
 <div align="center">
   <br />
 
-  ![The Reaper!](lib/assets/images/reaper.jpeg)
+  ![The Reaper!](lib/assets/images/reaper.gif)
 
   <br />
 
