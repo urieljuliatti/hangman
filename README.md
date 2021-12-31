@@ -71,7 +71,7 @@ codigo aqui
 ```
 
 ## FAQ
-### Why is it called Choo?
+### Why is it called?
 Because I thought it sounded cute. All these programs talk about being
 _"performant"_, _"rigid"_, _"robust"_ - I like programming to be light, fun and
 non-scary. Choo embraces that.
@@ -80,7 +80,7 @@ Also imagine telling some business people you chose to rewrite something
 critical for serious bizcorp using a train themed framework.
 :steam_locomotive::train::train::train:
 
-### Is it called Choo, Choo.js or...?
+### Is it or...?
 It's called "Choo", though we're fine if you call it "Choo-choo" or
 "Chugga-chugga-choo-choo" too. The only time "choo.js" is tolerated is if /
 when you shimmy like you're a locomotive.
@@ -100,7 +100,7 @@ significant overhead. To optimize we recommend running `browserify` with
 $ browserify -g nanohtml
 ```
 
-### Is choo production ready?
+### Is production ready?
 Sure.
 
 
@@ -111,13 +111,8 @@ $ ruby start.rb
 ```
 
 ## Veja Também
-- [bankai](https://github.com/choojs/bankai) - streaming asset compiler
-- [stack.gl](http://stack.gl/) - open software ecosystem for WebGL
-- [yo-yo](https://github.com/maxogden/yo-yo) - tiny library for modular UI
-- [tachyons](https://github.com/tachyons-css/tachyons) - functional CSS for
-  humans
-- [sheetify](https://github.com/stackcss/sheetify) - modular CSS bundler for
-  `browserify`
+- [usuario](https://github.com/usuario) - contribuição
+  `colorify`
 
 ## Support
 Creating a quality framework takes a lot of time. Unlike others frameworks,
