@@ -46,7 +46,7 @@ module Repositories
     end
 
     private
-    
+
     def collection
       RepoFile.all
     end
