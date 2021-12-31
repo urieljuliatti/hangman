@@ -5,12 +5,6 @@
 
   ![The Reaper!](lib/assets/images/reaper.gif)
 
-  <br />
-
-  ![Hangman Game!](lib/assets/images/hangman.jpeg)
-
-  <br />
-
 
 </div>
 
