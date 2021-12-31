@@ -50,12 +50,13 @@
 </div>
 
 
-## Table of Contents
+## Sumário
 - [Funcionamento](#funcionamento)
 - [FAQ](#faq)
 - [Instalação](#instalação)
+- [Traduções](#traduções)
 - [Veja mais](#veja-mais)
-- [Apoie](#support)
+- [Contribua](#contribua)
 
 ## Funcionamento
 - __minimal size:__ weighing `4kb`, Choo is a tiny little framework
@@ -71,37 +72,7 @@ codigo aqui
 ```
 
 ## FAQ
-### Why is it called?
-Because I thought it sounded cute. All these programs talk about being
-_"performant"_, _"rigid"_, _"robust"_ - I like programming to be light, fun and
-non-scary. Choo embraces that.
-
-Also imagine telling some business people you chose to rewrite something
-critical for serious bizcorp using a train themed framework.
-:steam_locomotive::train::train::train:
-
-### Is it or...?
-It's called "Choo", though we're fine if you call it "Choo-choo" or
-"Chugga-chugga-choo-choo" too. The only time "choo.js" is tolerated is if /
-when you shimmy like you're a locomotive.
-
-### Does Choo use a virtual-dom?
-Choo uses [nanomorph][nanomorph], which diffs real DOM nodes instead of
-virtual nodes. It turns out that [browsers are actually ridiculously good at
-dealing with DOM nodes][morphdom-bench], and it has the added benefit of
-working with _any_ library that produces valid DOM nodes. So to put a long
-answer short: we're using something even better.
-
-### How can I support older browsers?
-Template strings aren't supported in all browsers, and parsing them creates
-significant overhead. To optimize we recommend running `browserify` with
-[nanohtml][nanohtml] as a global transform or using [bankai][bankai] directly.
-```sh
-$ browserify -g nanohtml
-```
-
-### Is production ready?
-Sure.
+### Pergunta #1
 
 
 ## Instalação
@@ -109,23 +80,36 @@ Sure.
 $ cd hangman
 $ ruby start.rb
 ```
+## Tradução
+
+### As traduções, etc..
+
+```yml
+pt-BR:
+  test: 'Teste em português'
+  topics:
+    animals: 'animais'
+      keyword: 'leão'
+      kind: 'grandes felinos'
+      name: 'Leão'
+```
 
 ## Veja Também
 - [usuario](https://github.com/usuario) - contribuição
   `colorify`
 
-## Support
+## Contribua
 Creating a quality framework takes a lot of time. Unlike others frameworks,
 Choo is completely independently funded. We fight for our users. This does mean
 however that we also have to spend time working contracts to pay the bills.
 This is where you can help: by chipping in you can ensure more time is spent
 improving Choo rather than dealing with distractions.
 
-### Sponsors
+### Apoiadores
 Become a sponsor and help ensure the development of independent quality
 software. You can help us keep the lights on, bellies full and work days sharp
 and focused on improving the state of the web. [Become a
-sponsor](https://opencollective.com/choo#sponsor)
+sponsor]()
 
 <a href="https://opencollective.com/choo/sponsor/0/website" target="_blank"><img src="https://opencollective.com/choo/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/choo/sponsor/1/website" target="_blank"><img src="https://opencollective.com/choo/sponsor/1/avatar.svg"></a>

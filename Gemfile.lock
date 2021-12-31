@@ -68,6 +68,7 @@ DEPENDENCIES
   awesome_print
   factory_bot
   fuubar
+  i18n
   pry
   rspec (~> 3.0)
   rubocop

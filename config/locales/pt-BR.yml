@@ -1,0 +1,16 @@
+pt-BR:
+  test: 'Teste em português'
+  displayable:
+    right_answer: 'Você acertou!'
+    wrong_answer: 'Você errou!'
+    successes: 'acertos'
+    mistakes: 'erros'
+    letters: 'letras'
+    you_won: 'Você venceu!'
+    you_lose: 'Você perdeu!'
+    keyword: 'palavra'
+  topic:
+    subject: 'tema'
+    kind: 'categoria'
+  game:
+    start: 'Digite uma letra: '
