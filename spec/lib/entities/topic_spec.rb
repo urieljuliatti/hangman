@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe Entities::Topic do
   subject(:topic_entity) { build(:topic_entity) }
-  let(:display) { "[subject]: \e[1m#{subject}\e[0m and [kind]: \e[1m#{kind} \e[0m" }
+  let(:display) { "[#{I18n.t('topic.subject')}]: \e[1m#{subject}\e[0m and [#{I18n.t('topic.kind')}]: \e[1m#{kind} \e[0m" }
 
   describe 'have attributes' do
     it { is_expected.to have_attributes(subject: 'animals') }

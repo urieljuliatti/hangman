@@ -1,0 +1,16 @@
+en:
+  test: 'English test'
+  displayable:
+    right_answer: 'Right answer!'
+    wrong_answer: 'Wrong answer!'
+    successes: 'successes'
+    mistakes: 'mistakes'
+    letters: 'letters'
+    you_won: 'You won!'
+    you_lose: 'You lose!'
+    keyword: 'keyword'
+  topic:
+    subject: 'subject'
+    kind: 'category'
+  game:
+    start: 'Type a letter: '

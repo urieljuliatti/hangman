@@ -13,7 +13,6 @@ module Hangman
       @successes = []
     end
 
-    # TODO: Remove whitespaces
     def answer(letter)
       return if taken?(letter)
 
@@ -34,7 +33,7 @@ module Hangman
       until game_over?
         break if won?
 
-        print 'Type a letter: '
+        print I18n.t('game.start')
         letter = gets.chomp.to_s
         answer(letter)
         display
