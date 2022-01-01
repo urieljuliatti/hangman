@@ -9,7 +9,6 @@ module Hangman
     I18n.default_locale = :'pt-BR'
 
     def self.build
-      puts I18n.default_locale.to_s
       topic = Repositories::Topic.new
       game = Hangman::Game.new(topic.selected_topic_entity)
       game.start
