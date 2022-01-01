@@ -18,10 +18,6 @@ module UI
         self.class.color_codes[color]
       end
 
-      def background_color(color)
-        self.class.color_codes[color]
-      end
-
       def default_colors(options)
         options[0] ||= foreground_color(:default)
       end

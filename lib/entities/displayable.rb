@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require './lib/ui/text_color'
-
 module Entities
   # Responsável pelas questões visuais: cores e o que é disposto em tela
   module Displayable
