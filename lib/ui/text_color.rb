@@ -8,6 +8,5 @@ class String
   extend UI::TextColor::ClassMethods
   include UI::TextColor::InstanceMethods
 
-  # métodos para colorir
   color_methods
 end

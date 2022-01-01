@@ -26,7 +26,7 @@ RSpec.describe Entities::Displayable do
   describe '.selected_topic_status' do
     subject { game.selected_topic_status }
 
-    it { is_expected.to eq "[#{I18n.t('topic.subject')}]: \e[1manimals\e[0m and [#{I18n.t('topic.kind')}]: \e[1mbig cats \e[0m" }
+    it { is_expected.to eq "\e[33m\e [#{I18n.t('topic.subject')}]: animals and [#{I18n.t('topic.kind')}]: big cats \e[0m" }
     it { is_expected.to match(/animals/) }
   end
 
@@ -38,7 +38,7 @@ RSpec.describe Entities::Displayable do
         game.answer(letter)
       end
 
-      it { is_expected.to eq "\e[40m\e [#{I18n.t('displayable.keyword')}]:  c   _   _   _   _   _   _  \e[0m" }
+      it { is_expected.to eq "\e[36m\e [#{I18n.t('displayable.keyword')}]:  c   _   _   _   _   _   _  \e[0m" }
       it { is_expected.to match(/c   _/) }
     end
 
@@ -52,7 +52,7 @@ RSpec.describe Entities::Displayable do
         game.whitespaces
       end
 
-      it { is_expected.to eq "\e[40m\e [#{I18n.t('displayable.keyword')}]:  n   _   _     _   _   _   _  \e[0m" }
+      it { is_expected.to eq "\e[36m\e [#{I18n.t('displayable.keyword')}]:  n   _   _     _   _   _   _  \e[0m" }
     end
   end
 
@@ -63,7 +63,7 @@ RSpec.describe Entities::Displayable do
       game.answer(letter)
     end
 
-    it { is_expected.to eq "\e[42m\e[39m\e [#{I18n.t('displayable.successes')}]: 1 => [#{I18n.t('displayable.letters')}]: [\"c\"] \e[0m" }
+    it { is_expected.to eq "\e[32m\e [#{I18n.t('displayable.successes')}]: 1 => [#{I18n.t('displayable.letters')}]: [\"c\"] \e[0m" }
   end
 
   describe '.mistakes_status' do
@@ -73,7 +73,7 @@ RSpec.describe Entities::Displayable do
       game.answer('d')
     end
 
-    it { is_expected.to eq "\e[41m\e[39m\e [#{I18n.t('displayable.mistakes')}]: 1 => [#{I18n.t('displayable.letters')}]: [\"d\"] \e[0m" }
+    it { is_expected.to eq "\e[31m\e [#{I18n.t('displayable.mistakes')}]: 1 => [#{I18n.t('displayable.letters')}]: [\"d\"] \e[0m" }
   end
 
   describe '.end_game_message' do

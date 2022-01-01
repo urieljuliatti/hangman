@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require './lib/ui/text_color'
+
 module Entities
   # Responsável pelas questões visuais: cores e o que é disposto em tela
   module Displayable
@@ -20,15 +22,15 @@ module Entities
     end
 
     def keyword_status
-      "\e[40m\e [#{I18n.t('displayable.keyword')}]: #{indexed_keyword_display} \e[0m"
+      "[#{I18n.t('displayable.keyword')}]: #{indexed_keyword_display}".color(:cyan)
     end
 
     def successes_status
-      "\e[42m\e[39m\e [#{I18n.t('displayable.successes')}]: #{successes.length} => [#{I18n.t('displayable.letters')}]: #{successes} \e[0m"
+      "[#{I18n.t('displayable.successes')}]: #{successes.length} => [#{I18n.t('displayable.letters')}]: #{successes}".color(:green)
     end
 
     def mistakes_status
-      "\e[41m\e[39m\e [#{I18n.t('displayable.mistakes')}]: #{mistakes.length} => [#{I18n.t('displayable.letters')}]: #{mistakes} \e[0m"
+      "[#{I18n.t('displayable.mistakes')}]: #{mistakes.length} => [#{I18n.t('displayable.letters')}]: #{mistakes}".color(:red)
     end
 
     def end_game_message
