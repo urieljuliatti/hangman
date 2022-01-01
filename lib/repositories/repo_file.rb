@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
 require 'json'
+require 'i18n'
 
 module Repositories
   class RepoFile
 
     DEFAULT_FILE = 'topics.json'.freeze
-    DEFAULT_FILE_PATH = './lib/files'.freeze
+    DEFAULT_FILE_PATH = "./lib/files/#{I18n.default_locale}".freeze
 
     def initialize(file)
-      @filepath = "./lib/files/#{file}"
+      @filepath = "./lib/files/#{I18n.default_locale}/#{file}"
     end
 
     def topics

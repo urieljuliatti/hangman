@@ -1,0 +1,59 @@
+{
+  "animais": {
+    "guepardo": {
+      "keyword": "guepardo",
+      "kind": "grandes felinos",
+      "name": "Guepardo"
+    },
+    "leão": {
+      "keyword": "leão",
+      "kind": "grandes felinos",
+      "name": "Leão"
+    },
+    "leopardo": {
+      "keyword": "leopardo",
+      "kind": "grandes felinos",
+      "name": "Leopardo"
+    },
+    "puma": {
+      "keyword": "puma",
+      "kind": "grandes felinos",
+      "name": "Puma"
+    }
+  },
+  "cidades": {
+    "cairo": {
+      "keyword": "cairo",
+      "kind": "grandes cidades",
+      "name": "Cairo"
+    },
+    "atenas": {
+      "keyword": "atenas",
+      "kind": "cidades antigas",
+      "name": "Atenas"
+    }
+    ,
+    "nova_iorque": {
+      "keyword": "nova_iorque",
+      "kind": "metrópoles",
+      "name": "Nova Iorque"
+    },
+    "ecatepec_de_morelos": {
+      "keyword": "ecatepec_de_morelos",
+      "kind": "cidades pequenas",
+      "name": "Ecatepec de Morelos"
+    }
+  },
+  "música": {
+    "thriller": {
+      "keyword": "thriller",
+      "kind": "Pop",
+      "name": "Thriller"
+    },
+    "help": {
+      "keyword": "help",
+      "kind": "Rock and Roll",
+      "name": "Help"
+    }
+  }
+}

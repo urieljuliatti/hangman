@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require 'json'
+require 'i18n'
 require 'spec_helper'
 
 RSpec.describe Repositories::RepoFile do
   subject(:repo_file) { described_class.new(file) }
   let(:file) { 'topics.json' }
   let(:fullpath) { repo_file.filepath }
-  let(:filepath) { './lib/files' }
+  let(:filepath) { "./lib/files/#{I18n.default_locale}" }
 
   describe '.topics' do
     subject(:topics) { repo_file.topics }
