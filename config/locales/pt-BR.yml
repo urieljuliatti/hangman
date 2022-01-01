@@ -1,5 +1,6 @@
 pt-BR:
-  test: 'Teste em português'
+  grammar:
+    and: 'e'
   displayable:
     right_answer: 'Você acertou!'
     wrong_answer: 'Você errou!'

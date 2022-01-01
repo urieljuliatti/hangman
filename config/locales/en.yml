@@ -1,5 +1,6 @@
 en:
-  test: 'English test'
+  grammar:
+    and: 'and'
   displayable:
     right_answer: 'Right answer!'
     wrong_answer: 'Wrong answer!'
