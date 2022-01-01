@@ -3,10 +3,6 @@
 module Entities
   # Responsável pelas questões visuais: cores e o que é disposto em tela
   module Displayable
-    # TODO: Optar pela gem? https://github.com/fazibear/colorize
-    # Exemplo de como as cores funcionam:
-    # https://stackoverflow.com/questions/1489183/how-can-i-use-ruby-to-colorize-the-text-output-to-a-terminal
-
     def display
       puts selected_topic_status
       puts keyword_status
