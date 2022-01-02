@@ -2,17 +2,30 @@
 
 module Entities
   # Responsável pelas questões visuais: cores e o que é disposto em tela
+  # Emojis: http://unicode.org/emoji/charts/full-emoji-list.html#1f469_1f3fb_200d_1f4bb
   module Displayable
     def display
+      puts "\u{25AA}" * wider
+      puts
       puts selected_topic_status
+      puts
       puts keyword_status
-      puts successes_status
-      puts mistakes_status
+      puts
+      puts "\u{25AA}" * wider
+      puts
+      print successes_status, mistakes_status
+      puts
+      puts
+      puts "\u{25AA}" * wider
+      puts
+      puts "\u{1F480} #{I18n.t('displayable.reaper')} \u{1F480}"
       puts hangman
+      puts "\u{25AA}" * wider
+      puts
     end
 
     def answer_feedback(response)
-      response ? "\e[42m\e[39m\e[5m #{I18n.t('displayable.right_answer')} \e[0m" : "\e[40m\e[41m\e[5m #{I18n.t('displayable.wrong_answer')} \e[0m"
+      response ? " \u{1F7E2} #{I18n.t('displayable.right_answer')}".color(:green) : "\u{1F6A8} #{I18n.t('displayable.wrong_answer')}".color(:red)
     end
 
     def selected_topic_status
@@ -36,6 +49,10 @@ module Entities
     end
 
     private
+
+    def wider
+      selected_topic_status.length > keyword_status.length ? selected_topic_status.length : keyword_status.length
+    end
 
     def indexed_keyword_display
       display = []

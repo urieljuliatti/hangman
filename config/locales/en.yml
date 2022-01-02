@@ -10,6 +10,7 @@ en:
     you_won: 'You won!'
     you_lose: 'You lose!'
     keyword: 'keyword'
+    reaper: 'The Reaper is coming to take you!'
   topic:
     subject: 'subject'
     kind: 'category'

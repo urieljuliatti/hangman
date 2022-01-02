@@ -10,6 +10,7 @@ pt-BR:
     you_won: 'Você venceu!'
     you_lose: 'Você perdeu!'
     keyword: 'palavra'
+    reaper: 'A morte irá te pegar!'
   topic:
     subject: 'tema'
     kind: 'categoria'
