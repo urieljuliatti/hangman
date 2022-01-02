@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
+require './lib/ui/emoji'
+
 module Entities
   # Responsável pelas questões visuais: cores e o que é disposto em tela
   # Emojis: http://unicode.org/emoji/charts/full-emoji-list.html#1f469_1f3fb_200d_1f4bb
   module Displayable
+    include UI::Emoji
+
     def display
       puts "\u{25AA}" * wider
       puts
@@ -25,7 +29,7 @@ module Entities
     end
 
     def answer_feedback(response)
-      response ? " \u{1F7E2} #{I18n.t('displayable.right_answer')}".color(:green) : "\u{1F6A8} #{I18n.t('displayable.wrong_answer')}".color(:red)
+      response ? " #{emoji(0x1F7E2)} #{I18n.t('displayable.right_answer')}".color(:green) : "#{emoji(0x1F6A8)} #{I18n.t('displayable.wrong_answer')}".color(:red)
     end
 
     def selected_topic_status

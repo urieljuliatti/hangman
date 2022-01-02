@@ -2,6 +2,7 @@
 
 require './lib/hangman/config'
 require './lib/entities/keywordable'
+require './lib/ui/emoji'
 require './lib/entities/displayable'
 require './lib/entities/puppetable'
 require './lib/hangman/game'
