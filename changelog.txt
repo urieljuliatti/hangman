@@ -1,10 +1,9 @@
 TODO: 
-
+- BUGFIX: do método answer: deveria devolver o feedback de true ou false e não possuir um answer feedback pra isso.
 - Dar a possibilidade do usuário digitar a palavra inteira e acertar ou errar
-- Adicionar opção de linguagem no build
-- Adicionar um .ruby-version
+- Adicionar atalhos: sair do jogo, mudar de palavra
 - Arrumar a stack de require
-- Definir um layout definitivo no papel e depois aplicar melhorias para construir o display com métodos automatizados 
+- Definir uma interface visual do jogo definitiva no papel. Aplicar melhorias para construir o display com métodos automatizados 
   para a matriz de separadores: método para montar as linhas, colunas, etc. 
 
   Exemplo:
@@ -14,10 +13,10 @@ TODO:
  
 Changelog 1.3.1:
 - Ajuste da tradução [v]
-- Ajuste do layout do display e da forca
 - Suporte a emojis com Hangman::UI::Emoji [v]
-- Ajuste do README
-- BUGFIX: do método answer: deveria devolver o feedback de true ou false e não possuir um answer feedback pra isso.
+- Adicionar opção de linguagem no build [v]
+- Ajuste do README [v]
+- Ajuste das traduções e suporte a inicialização com idioma. [v]
 
 Changelog 1.3:
 

@@ -43,8 +43,20 @@
 
 3. E por último, rode o jogo:
 
+<br />
+
 ```sh
 $ ruby start.rb
+```
+
+<br />
+
+4. __(Idioma Opcional: pt-BR)__
+
+<br />
+
+```sh
+$ ruby start.rb pt-BR
 ```
 
 <br />
