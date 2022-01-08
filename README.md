@@ -77,4 +77,4 @@ Seja um apoiador! Veja só aí, se até o __Bender__ nos apóia... porque você 
 
 <br />
 
-[![Bender](lib/assets/images/bender-icon-128.png)](https://futurama.fandom.com/pt-br/wiki/Bender_Bending_Rodr%C3%ADguez)
+[![Bender](lib/assets/images/bender-metralhadora.gif)](https://futurama.fandom.com/pt-br/wiki/Bender_Bending_Rodr%C3%ADguez)
