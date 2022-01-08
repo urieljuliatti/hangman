@@ -9,22 +9,22 @@ module Entities
     include UI::Emoji
 
     def display
-      puts "\u{25AA}" * wider
+      puts emoji(0x25AA).to_s * wider
       puts
       puts selected_topic_status
       puts
       puts keyword_status
       puts
-      puts "\u{25AA}" * wider
+      puts emoji(0x25AA).to_s * wider
       puts
       print successes_status, mistakes_status
       puts
       puts
-      puts "\u{25AA}" * wider
+      puts emoji(0x25AA).to_s * wider
       puts
-      puts "\u{1F480} #{I18n.t('displayable.reaper')} \u{1F480}"
+      puts "#{emoji(0x1F480)} #{I18n.t('displayable.reaper')} #{emoji(0x1F480)}"
       puts hangman
-      puts "\u{25AA}" * wider
+      puts emoji(0x25AA).to_s * wider
       puts
     end
 
