@@ -15,7 +15,7 @@
 
 - [Como o jogo funciona](#como-o-jogo-funciona)
 - [Executando o jogo](#executando-o-jogo)
-- [Troubleshooting] (#troubleshooting)
+- [Troubleshooting](#troubleshooting)
 - [Contribua](#contribua)
 
 <br />
@@ -90,7 +90,11 @@ $ stty sane
 
 <br />
 
-Aqui
+Esse simples projeto possui um signifcado importante, pois me serviu tanto para aprendizado técnico quanto para o desenvolimento pessoal. Sabendo das minhas limitações, antes mesmo de iniciar o desenvolvimento do jogo eu já tinha o costume de resolver katas nos tempos livres para desenvolver alguns predicados ainda adormecidos. Mas foi com a história contida nesse artigo que tudo mudou: [CodeKata: How It Started](http://codekata.com/kata/codekata-how-it-started/), foi a partir dele que obtive o costume de desenvolver sem compromissos entre o certo ou o errado, adotar algo e investir tempo, apenas com o objetivo de aperfeiçoar _- e se divertir, claro!_ 
+
+Experimentar, improvisar, comparar com o que já foi feito, refazer se for preciso, mas sem a obrigatoriedade de chegar a algum lugar. 
+
+Fiquem à vontade para contribuir, apontar issues, melhorias e, se quiserem, participar!
 
 <br />
 
