@@ -15,6 +15,7 @@
 
 - [Como o jogo funciona](#como-o-jogo-funciona)
 - [Executando o jogo](#executando-o-jogo)
+- [Troubleshooting] (#troubleshooting)
 - [Contribua](#contribua)
 
 <br />
@@ -57,6 +58,30 @@ $ ruby start.rb
 
 ```sh
 $ ruby start.rb pt-BR
+```
+
+<br />
+
+# Troubleshooting
+
+<br />
+
+### Em algumas ocasiões, especialmente se você utilizar Mac, você poderá se deparar com um caracter __^M__ ao apertar a tecla __ENTER__:
+
+<br />
+
+```sh
+Digite uma letra: a^M
+```
+
+<br />
+
+### A solução: 
+
+<br />
+
+```sh
+$ stty sane
 ```
 
 <br />
