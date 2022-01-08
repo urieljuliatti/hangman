@@ -1,18 +1,35 @@
 # frozen_string_literal: true
 
+require './lib/ui/emoji'
+
 module Entities
   # Responsável pelas questões visuais: cores e o que é disposto em tela
+  # Emojis: http://unicode.org/emoji/charts/full-emoji-list.html#1f469_1f3fb_200d_1f4bb
   module Displayable
+    include UI::Emoji
+
     def display
+      puts emoji(0x25AA).to_s * wider
+      puts
       puts selected_topic_status
+      puts
       puts keyword_status
-      puts successes_status
-      puts mistakes_status
+      puts
+      puts emoji(0x25AA).to_s * wider
+      puts
+      print successes_status, mistakes_status
+      puts
+      puts
+      puts emoji(0x25AA).to_s * wider
+      puts
+      puts "#{emoji(0x1F480)} #{I18n.t('displayable.reaper')} #{emoji(0x1F480)}"
       puts hangman
+      puts emoji(0x25AA).to_s * wider
+      puts
     end
 
     def answer_feedback(response)
-      response ? "\e[42m\e[39m\e[5m #{I18n.t('displayable.right_answer')} \e[0m" : "\e[40m\e[41m\e[5m #{I18n.t('displayable.wrong_answer')} \e[0m"
+      response ? " #{emoji(0x1F7E2)} #{I18n.t('displayable.right_answer')}".color(:green) : "#{emoji(0x1F6A8)} #{I18n.t('displayable.wrong_answer')}".color(:red)
     end
 
     def selected_topic_status
@@ -36,6 +53,10 @@ module Entities
     end
 
     private
+
+    def wider
+      selected_topic_status.length > keyword_status.length ? selected_topic_status.length : keyword_status.length
+    end
 
     def indexed_keyword_display
       display = []

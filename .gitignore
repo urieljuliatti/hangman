@@ -9,7 +9,8 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
-
+changelog.txt
+*.DS_Store
 # Used by dotenv library to load environment variables.
 # .env
 
@@ -53,4 +54,4 @@ build-iPhoneSimulator/
 .rvmrc
 
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
-# .rubocop-https?--*
+# .rubocop-https?--*.DS_Store

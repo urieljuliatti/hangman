@@ -1,5 +1,6 @@
 pt-BR:
-  test: 'Teste em português'
+  grammar:
+    and: 'e'
   displayable:
     right_answer: 'Você acertou!'
     wrong_answer: 'Você errou!'
@@ -9,6 +10,7 @@ pt-BR:
     you_won: 'Você venceu!'
     you_lose: 'Você perdeu!'
     keyword: 'palavra'
+    reaper: 'A morte irá te pegar!'
   topic:
     subject: 'tema'
     kind: 'categoria'

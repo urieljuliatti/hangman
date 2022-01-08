@@ -1,0 +1,96 @@
+TODO: 
+- BUGFIX: do método answer: deveria devolver o feedback de true ou false e não possuir um answer feedback pra isso.
+- Dar a possibilidade do usuário digitar a palavra inteira e acertar ou errar
+- Adicionar atalhos: sair do jogo, mudar de palavra
+- Arrumar a stack de require
+- Definir uma interface visual do jogo definitiva no papel. Aplicar melhorias para construir o display com métodos automatizados 
+  para a matriz de separadores: método para montar as linhas, colunas, etc. 
+
+  Exemplo:
+ 
+  def display_line(content: "Hello world", split: '', join: '')
+  end
+ 
+Changelog 1.3.1:
+- Ajuste da tradução [v]
+- Suporte a emojis com Hangman::UI::Emoji [v]
+- Adicionar opção de linguagem no build [v]
+- Ajuste do README [v]
+- Ajuste das traduções e suporte a inicialização com idioma. [v]
+
+Changelog 1.3:
+
+- Aplicando as cores e refatorando o código do display
+
+
+Changelog 1.2:
+
+- Adicionando cores pelo UI::TextColor::Color diretamente pela classe String
+
+Changelog 1.1:
+
+- Encontrar uma forma de ler os dados dos tópicos através do yml traduzido e dispensar o JSON
+
+Changelog 1.0:
+
+1 - Adicionando um starter (start.rb) no root do projeto
+2 - Adicionando um README
+3 - Adicionando um .gitignore
+4 - Suporte à internacionalização da interface
+
+TODO: Cobrir o colors com testes
+
+TODO: Suporte a background
+
+TODO: Suporte a modos:
+
+# UNIX color modes hash
+def color_modes
+  {
+    default: 0,
+    bold: 1,
+    italic: 3,
+    underline: 4,
+    blink: 5,
+    reverse_color: 7,
+  }
+end
+
+--------------------------------------------------------------------------------------------------------------------------
+
+# boas práticas e ideias
+
+# Uso de ClassMetods e InstanceMethods nos módulos. Ajuda a organizar.
+
+# Ex de estrutura:
+
+# lib/motorize:
+
+|-- motorize/
+   |-- class_methods.rb
+   |-- instance_methods.rb
+|-- motorize.rb
+
+# lib/motorize.rb
+
+class WhatYouWantToExtendorInclude
+  extend Motorize::ClassMethods
+  include Motorize::InstanceMethods
+  
+end
+
+--------------------------------------------------------------------------------------------------------------------------
+
+# Como as cores funcionam?
+
+https://stackoverflow.com/questions/1489183/how-can-i-use-ruby-to-colorize-the-text-output-to-a-terminal
+
+--------------------------------------------------------------------------------------------------------------------------
+
+# colorize gem
+
+https://github.com/fazibear/colorize/blob/master/lib/colorize.rb
+https://github.com/fazibear/colorize/blob/526654c6d7dfc5483b70184d06b994eba8359514/lib/colorize/class_methods.rb
+https://github.com/fazibear/colorize/blob/526654c6d7dfc5483b70184d06b994eba8359514/lib/colorize/instance_methods.rb
+
+--------------------------------------------------------------------------------------------------------------------------

@@ -27,14 +27,13 @@ module Hangman
     end
 
     def start
-      puts ''
       display
-      puts ''
+      puts
       until game_over?
         break if won?
 
         print I18n.t('game.start')
-        letter = gets.chomp.to_s
+        letter = $stdin.gets.chomp.to_s
         answer(letter)
         display
       end
