@@ -14,9 +14,12 @@ require './lib/hangman/game'
 require 'awesome_print'
 require 'factory_bot'
 require 'pry'
+require 'i18n'
 
 RSpec.configure do |config|
   config.before :all do
+    I18n.load_path << "#{__dir__}/../config/locales/en.yml"
+    I18n.available_locales = [:en]
     I18n.default_locale = :en
   end
   config.include FactoryBot::Syntax::Methods
