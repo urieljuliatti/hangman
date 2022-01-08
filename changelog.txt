@@ -1,8 +1,11 @@
 TODO: 
 
-- Testes em toda a UI
+- Dar a possibilidade do usuário digitar a palavra inteira e acertar ou errar
+- Adicionar opção de linguagem no build
+- Adicionar um .ruby-version
 - Arrumar a stack de require
-- Melhorias para o display com métodos automatizados para a matriz de separadores: método para montar as linhas, colunas, 
+- Definir um layout definitivo no papel e depois aplicar melhorias para construir o display com métodos automatizados 
+  para a matriz de separadores: método para montar as linhas, colunas, etc. 
 
   Exemplo:
  
