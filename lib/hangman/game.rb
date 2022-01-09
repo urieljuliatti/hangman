@@ -16,14 +16,14 @@ module Hangman
     def answer(letter)
       return if taken?(letter)
 
-      if included?(letter)
-        puts answer_feedback(true)
+      response = included?(letter)
+      if response
         search_and_index(letter)
         @successes.push(letter)
       else
-        puts answer_feedback(false)
         @mistakes.push(letter)
       end
+      response
     end
 
     def start
@@ -34,7 +34,7 @@ module Hangman
 
         print I18n.t('game.start')
         letter = $stdin.gets.chomp.to_s
-        answer(letter)
+        puts answer_feedback answer(letter)
         display
       end
       puts end_game_message

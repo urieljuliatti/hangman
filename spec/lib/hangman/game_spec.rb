@@ -62,8 +62,7 @@ RSpec.describe Hangman::Game do
       it { expect(game.mistakes).to_not be_empty }
       it { expect(game.mistakes).to contain_exactly('d') }
       it { expect(game.mistakes).to match_array ['d'] }
-      it { is_expected.to contain_exactly('d') }
-      it { is_expected.to match_array ['d'] }
+      it { is_expected.to be_falsey}
     end
 
     context 'when is correct' do
@@ -76,8 +75,7 @@ RSpec.describe Hangman::Game do
       it { expect(game.successes).to_not be_empty }
       it { expect(game.successes).to contain_exactly('e') }
       it { expect(game.successes).to match_array ['e'] }
-      it { is_expected.to contain_exactly('e') }
-      it { is_expected.to match_array ['e'] }
+      it { is_expected.to be_truthy }
     end
 
     context 'when the word has whitespaces' do
@@ -98,8 +96,7 @@ RSpec.describe Hangman::Game do
       it { expect(game.successes).to_not be_empty }
       it { expect(game.successes).to contain_exactly('n', 'e', 'w', 'y', 'o', 'r', 'k') }
       it { expect(game.successes).to match_array %w[n e w y o r k] }
-      it { is_expected.to contain_exactly('n', 'e', 'w', 'y', 'o', 'r', 'k') }
-      it { is_expected.to match_array %w[n e w y o r k] }
+      it { is_expected.to be_truthy }
       it { expect(game.won?).to be_truthy }
     end
   end
