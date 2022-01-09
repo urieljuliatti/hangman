@@ -5,7 +5,7 @@ module Hangman
   class Game
     include Entities::Keywordable # trata a keyword
     include Entities::Displayable # monta o output do jogo
-    include Entities::Puppetable # monta o status do hangman
+    include Entities::Puppetable # monta o corpo do hangman
 
     def initialize(selected_topic_entity)
       @selected_topic_entity = selected_topic_entity
@@ -14,7 +14,7 @@ module Hangman
     end
 
     def answer(letter)
-      return if taken?(letter)
+      return if taken?(letter) || letter.empty?
 
       response = included?(letter)
       if response
@@ -34,7 +34,9 @@ module Hangman
 
         print I18n.t('game.start')
         letter = $stdin.gets.chomp.to_s
+        puts
         puts answer_feedback answer(letter)
+        puts
         display
       end
       puts end_game_message

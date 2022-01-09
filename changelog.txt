@@ -1,5 +1,6 @@
 TODO: 
-- BUGFIX: do método answer: deveria devolver o feedback de true ou false e não possuir um parâmetro em um método de feedback.
+- BUGFIX: do método answer: deveria devolver o feedback de true ou false e não possuir um parâmetro em um método de feedback. [v]
+- tratar quando o envio for vazio [v]
 - Dar a possibilidade do usuário digitar a palavra inteira e acertar ou errar
 - Adicionar menu: sair do jogo, mudar de palavra
 - Arrumar a stack de require
