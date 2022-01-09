@@ -1,13 +1,12 @@
-# The Hangman
-
 <div align="center">
+  
+  # The Hangman
+
   <br />
 
   ![The Reaper!](lib/assets/images/reaper.gif)
 
 </div>
-
-<br />
 
 # Sumário
 
