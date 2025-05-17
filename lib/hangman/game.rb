@@ -29,6 +29,11 @@ module Hangman
     def start
       display
       puts
+      play_game
+      puts end_game_message
+    end
+
+    def play_game
       until game_over?
         break if won?
 
@@ -39,7 +44,6 @@ module Hangman
         puts
         display
       end
-      puts end_game_message
     end
 
     def game_over?

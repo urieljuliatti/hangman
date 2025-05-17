@@ -2,6 +2,8 @@
 
 require 'spec_helper'
 
+# rubocop:disable Metrics/BlockLength
+
 RSpec.describe Repositories::Topic do
   subject(:topic) { described_class.new }
   let(:selected_entity) { build(:topic_entity) }
@@ -9,14 +11,14 @@ RSpec.describe Repositories::Topic do
   let(:random_keyword_id) { 0 }
   let(:subject_word) { 'animals' }
   let(:keyword) { 'cheetah' }
-  let(:randomized_attributes) {
+  let(:randomized_attributes) do
     {
       random_subject_id: random_subject_id,
       random_keyword_id: random_keyword_id,
       keyword: keyword,
       subject: subject_word
     }
-  }
+  end
   let(:topic_attributes) do
     {
       subject: 'animals',
@@ -31,27 +33,18 @@ RSpec.describe Repositories::Topic do
   end
 
   describe '.selected_topic' do
-    context 'when strtuct is filled in properly' do
-      subject(:selected_topic_entity) { topic.selected_topic_entity }
-
-      it { is_expected.to have_attributes topic_attributes }
-    end
+    subject(:selected_topic_entity) { topic.selected_topic_entity }
+    it { is_expected.to have_attributes topic_attributes }
   end
 
   describe '.select_topic' do
-    context 'when random topic is generated' do
-      subject(:selected_topic_entity) { topic.select_topic_entity }
-
-      it { is_expected.to eql selected_entity }
-    end
+    subject(:selected_topic_entity) { topic.select_topic_entity }
+    it { is_expected.to eql selected_entity }
   end
 
   describe '.randomized' do
-    context 'when random values are generated' do
-      subject(:randomized) { topic.randomized }
-
-      it { is_expected.to eql randomized_attributes }
-    end
+    subject(:randomized) { topic.randomized }
+    it { is_expected.to eql randomized_attributes }
   end
-
 end
+# rubocop:enable Metrics/BlockLength

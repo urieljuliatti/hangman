@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require_relative '../../support/shared_examples/game_setup'
 
 RSpec.describe Hangman::Config do
   let(:topic) { instance_double('Repositories::Topic') }
@@ -15,27 +16,13 @@ RSpec.describe Hangman::Config do
   end
 
   describe '.build' do
-
     context 'with brazilian portuguese' do
       it 'sets the default locale to brazilian portuguese' do
         described_class.build('pt-BR')
         expect(I18n.default_locale).to eq(:"pt-BR")
       end
 
-      it 'creates a new topic repository' do
-        expect(Repositories::Topic).to receive(:new)
-        described_class.build('pt-BR')
-      end
-
-      it 'creates a new game with the selected topic' do
-        expect(Hangman::Game).to receive(:new).with(topic_entity)
-        described_class.build('pt-BR')
-      end
-
-      it 'starts the game' do
-        expect(game).to receive(:start)
-        described_class.build('pt-BR')
-      end
+      it_behaves_like 'game setup', 'pt-BR'
     end
 
     context 'with english' do
@@ -44,20 +31,7 @@ RSpec.describe Hangman::Config do
         expect(I18n.default_locale).to eq(:en)
       end
 
-      it 'creates a new topic repository' do
-        expect(Repositories::Topic).to receive(:new)
-        described_class.build('en')
-      end
-
-      it 'creates a new game with the selected topic' do
-        expect(Hangman::Game).to receive(:new).with(topic_entity)
-        described_class.build('en')
-      end
-
-      it 'starts the game' do
-        expect(game).to receive(:start)
-        described_class.build('en')
-      end
+      it_behaves_like 'game setup', 'en'
     end
   end
 end

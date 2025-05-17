@@ -1,0 +1,38 @@
+{
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "files.trimTrailingWhitespace": true,
+  "[ruby]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "files.insertFinalNewline": true
+  },
+  "rubyLsp.bundleGemfile": "/Users/urielvalle/Documents/GitHub/hangman/Gemfile",
+  "rubyLsp.rubyExecutablePath": "/Users/urielvalle/.rbenv/shims/ruby",
+  "rubyLsp.rubyVersionManager": {
+      "rbenvExecutablePath": "opt/homebrew/bin/rbenv",
+      "identifier": "rbenv"
+  },
+  "rubyLsp.formatter": "syntax_tree",
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "signatureHelp": true,
+    "typeHierarchy": true
+  },
+  "rubocop.mode": "enableUnconditionally"
+}

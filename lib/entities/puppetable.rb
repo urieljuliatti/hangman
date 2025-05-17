@@ -15,7 +15,7 @@ module Entities
       }
     end
 
-    def hangman
+    def hangman # rubocop:disable Metrics/AbcSize, Metrics/MethodLength, Metrics/CyclomaticComplexity
       case mistakes.size
       when 1
         puts pole

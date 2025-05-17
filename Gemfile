@@ -2,10 +2,27 @@
 
 source 'https://rubygems.org'
 
-gem 'awesome_print'
-gem 'factory_bot'
-gem 'fuubar'
+ruby '3.3.2'
+
+# Core dependencies
 gem 'i18n'
-gem 'pry'
-gem 'rspec', '~> 3.0'
-gem 'rubocop'
+
+# Development tools
+gem 'awesome_print'
+
+# Testing and quality
+gem 'fuubar'
+gem 'rubocop-lsp'
+
+group :development, :test do
+  # Testing framework
+  gem 'byebug'
+  gem 'factory_bot'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'rspec', require: false
+
+  # Code quality
+  gem 'rubocop', '~> 1.75.6', require: false
+  gem 'ruby-lsp', require: false
+end

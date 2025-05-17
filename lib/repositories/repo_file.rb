@@ -4,9 +4,9 @@ require 'json'
 require 'i18n'
 
 module Repositories
+  # Handles file operations for topic data, including reading and parsing JSON files
   class RepoFile
-
-    DEFAULT_FILE = 'topics.json'.freeze
+    DEFAULT_FILE = 'topics.json'
     DEFAULT_FILE_PATH = "./lib/files/#{I18n.default_locale}".freeze
 
     def initialize(file)

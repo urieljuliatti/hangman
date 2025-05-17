@@ -49,15 +49,25 @@ module Entities
       letters = selected_topic_entity_letters - repeated_letters[:letters]
 
       if repeated_letters.count > 1
-        repeated_letters[:ids].each_index do |i|
-          indexed_keyword[repeated_letters[:ids][i]] = repeated_letters[:letters][i]
-        end
+        index_repeated_letters(repeated_letters)
       else
-        letters.each_index.select do |i|
-          indexed_keyword[i] = letter
-        end
+        index_single_letter(letters, letter)
       end
       indexed_keyword
+    end
+
+    private
+
+    def index_repeated_letters(repeated_letters)
+      repeated_letters[:ids].each_index do |i|
+        indexed_keyword[repeated_letters[:ids][i]] = repeated_letters[:letters][i]
+      end
+    end
+
+    def index_single_letter(letters, letter)
+      letters.each_index.select do |i|
+        indexed_keyword[i] = letter
+      end
     end
   end
 end

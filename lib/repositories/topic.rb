@@ -16,17 +16,12 @@ module Repositories
       @selected_topic_entity ||= rspec_flag ? build_cheetah : select_topic_entity
     end
 
-    # TODO: mover para um módulo
     def select_topic_entity
       collection.each_key do |key|
-        @topic_entity.subject = randomized[:subject] if key.eql?(randomized[:subject])
-        collection[key].each do |kw, value|
-          next unless kw.eql?(randomized[:keyword])
+        next unless key.eql?(randomized[:subject])
 
-          @topic_entity.keyword = randomized[:keyword]
-          @topic_entity.kind = value['kind']
-          @topic_entity.name = value['name']
-        end
+        set_subject
+        set_keyword_and_attributes
       end
       @topic_entity
     end
@@ -47,21 +42,42 @@ module Repositories
 
     private
 
+    def set_subject
+      @topic_entity.subject = randomized[:subject]
+    end
+
+    def set_keyword_and_attributes
+      collection[randomized[:subject]].each do |kw, value|
+        next unless kw.eql?(randomized[:keyword])
+
+        @topic_entity.keyword = randomized[:keyword]
+        @topic_entity.kind = value['kind']
+        @topic_entity.name = value['name']
+      end
+    end
+
     def collection
       RepoFile.all
     end
 
     def random
       @randomized = {}
-      random_subject_id = (rand 0..collection.length - 1)
-      random_keyword_id = (rand 0..collection.values[random_subject_id].length - 1)
-      keyword = collection.values[random_subject_id].keys[random_keyword_id]
-      subject = collection.keys[random_subject_id]
-      @randomized = {
-        random_subject_id: random_subject_id,
-        random_keyword_id: random_keyword_id,
-        keyword: keyword,
-        subject: subject
+      subject_id, keyword_id = select_random_ids
+      @randomized = build_randomized_data(subject_id, keyword_id)
+    end
+
+    def select_random_ids
+      subject_id = rand(0..collection.length - 1)
+      keyword_id = rand(0..collection.values[subject_id].length - 1)
+      [subject_id, keyword_id]
+    end
+
+    def build_randomized_data(subject_id, keyword_id)
+      {
+        random_subject_id: subject_id,
+        random_keyword_id: keyword_id,
+        keyword: collection.values[subject_id].keys[keyword_id],
+        subject: collection.keys[subject_id]
       }
     end
   end
