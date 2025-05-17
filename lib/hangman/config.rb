@@ -3,7 +3,8 @@
 module Hangman
   # Responsável por carregar as informações iniciais do jogo
   module Config
-    def self.build
+    def self.build(default_locale)
+      I18n.default_locale = default_locale
       topic = Repositories::Topic.new
       game = Hangman::Game.new(topic.selected_topic_entity)
       game.start

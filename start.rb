@@ -2,4 +2,9 @@
 
 require './lib/hangman'
 
-Hangman::Config.build
+puts 'Choose your language/Escolha seu idioma: (en or pt-BR)'
+default_locale = gets.chomp
+
+Hangman::Config.build(default_locale)
+
+

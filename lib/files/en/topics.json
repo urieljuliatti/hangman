@@ -54,6 +54,16 @@
       "keyword": "help",
       "kind": "Rock and Roll",
       "name": "Help"
+    },
+    "take_on_me": {
+      "keyword": "take_on_me",
+      "kind": "Pop",
+      "name": "Take on Me"
+    },
+    "message_in_a_bottle": {
+      "keyword": "message_in_a_bottle",
+      "kind": "Pop",
+      "name": "Message in a Bottle"
     }
   }
 }
