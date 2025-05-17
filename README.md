@@ -1,108 +1,168 @@
-<div align="center">
-  
-  # The Hangman
 
-  <br />
 
-  ![The Reaper!](lib/assets/images/reaper.gif)
 
-</div>
-
-# Sumário
-
-<br />
-
-- [Como o jogo funciona](#como-o-jogo-funciona)
-- [Executando o jogo](#executando-o-jogo)
-- [Troubleshooting](#troubleshooting)
-- [Contribua](#contribua)
-
-<br />
-
-# Como o jogo funciona
-
-<br />
-
-## __Hangman__ ou simplesmente __Jogo da Forca__ funciona da seguinte maneira:
-
-<br />
-
-<p> O jogador tem que acertar qual é a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra. A cada letra errada, é desenhado uma parte do corpo do enforcado. O jogo termina ou com o acerto da palavra ou com o término do preenchimento das partes corpóreas do enforcado. </p>
-
-<p><strong>Observação:</strong> Pode-se escolher entre falar uma letra ou <strong>fazer uma tentativa perigosa de tentar adivinhar a palavra falando a palavra que pensa que é.</strong> Nesse caso, se errar a palavra, perderá na hora.</p>
-
-<br />
-
-# Executando o jogo
-
-<br />
-
-1. Baixe o respositório, vá até o diretório do projeto.
-
-2. Execute `bundle install` para instalar as dependências
-
-3. E por último, rode o jogo:
-
-<br />
 
 ```sh
 $ ruby start.rb
 ```
 
+
+
+
 <br />
 
-4. __(Idioma Opcional: pt-BR)__
+
+
+
+4. __(Optional Language: en-BR)__
+
+
+
 
 <br />
+
+
+
 
 ```sh
-$ ruby start.rb pt-BR
+$ ruby start.rb en-BR
 ```
 
+
+
+
 <br />
+
+
+
 
 # Troubleshooting
 
+
+
+
 <br />
 
-### Em algumas ocasiões, especialmente se você utilizar Mac, você poderá se deparar com um caracter __^M__ ao apertar a tecla __ENTER__:
+
+
+
+### On some occasions, especially if you use a Mac, you may come across a __^M__ character when you press the __ENTER__ key :
+
+
+
 
 <br />
+
+
+
 
 ```sh
-Digite uma letra: a^M
+Type a letter: a^M
 ```
 
+
+
+
 <br />
 
-### A solução: 
+
+
+
+### The solution :
+
+
+
 
 <br />
+
+
+
 
 ```sh
 $ stty sane
 ```
 
-<br />
 
-# Contribua
 
-<br />
-
-Esse simples projeto possui um signifcado importante, pois me serviu tanto para aprendizado técnico quanto para o desenvolimento pessoal. Sabendo das minhas limitações, antes mesmo de iniciar o desenvolvimento do jogo eu já tinha o costume de resolver katas nos tempos livres para desenvolver alguns predicados ainda adormecidos. Mas foi com a história contida nesse artigo que tudo mudou: [CodeKata: How It Started](http://codekata.com/kata/codekata-how-it-started/), foi a partir dele que obtive o costume de desenvolver sem compromissos entre o certo ou o errado, adotar algo e investir tempo, apenas com o objetivo de aperfeiçoar _- e se divertir, claro!_ 
-
-Experimentar, improvisar, comparar com o que já foi feito, refazer se for preciso, mas sem a obrigatoriedade de chegar a algum lugar. 
-
-Fiquem à vontade para contribuir, apontar issues, melhorias e, se quiserem, participar!
 
 <br />
 
-# Apoiadores
+
+
+
+# Contribute
+
+
+
 
 <br />
 
-Seja um apoiador! Veja só aí, se até o __Bender__ nos apóia... porque você não apoiaria!?
+
+
+
+This simple project has an important meaning, as it has served me both for technical learning and personal development. Knowing my limitations, even before I started developing the game I used to solve katas in my spare time to develop some dormant skills. But it was with the story contained in this article that everything changed: [CodeKata: How It Started](http://codekata.com/kata/codekata-how-it-started/), it was from there that I got into the habit of developing without compromising between right and wrong, adopting something and investing time, just with the aim of perfecting _- and having fun, of course!_
+
+
+```sh
+$ ruby start.rb
+```
+
 
 <br />
 
-[![Bender](lib/assets/images/bender-metralhadora.gif)](https://futurama.fandom.com/pt-br/wiki/Bender_Bending_Rodr%C3%ADguez)
+
+4. __(Optional Language: en-BR)__
+
+
+<br />
+
+
+```sh
+$ ruby start.rb en-BR
+```
+
+
+<br />
+
+
+# Troubleshooting
+
+
+<br />
+
+
+### On some occasions, especially if you use a Mac, you may come across a __^M__ character  when you press the __ENTER__ key :
+
+
+<br />
+
+
+```sh
+Type a letter: a^M
+```
+
+
+<br />
+
+
+### The solution :
+
+
+<br />
+
+
+```sh
+$ stty sane
+```
+
+
+<br />
+
+
+# Contribute
+
+
+<br />
+
+
+This simple project has an important meaning, as it has served me both for technical learning and personal development. Knowing my limitations, even before I started developing the game I used to solve katas in my spare time to develop some dormant skills. But it was with the story contained in this article that everything changed: [CodeKata: How It Started](http://codekata.com/kata/codekata-how-it-started/), it was from there that I got into the habit of developing without compromising between right and wrong, adopting something and investing time, just with the aim of perfecting _- and having fun, of course!_
