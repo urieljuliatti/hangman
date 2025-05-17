@@ -14,28 +14,6 @@ $ ruby start.rb
 
 
 
-4. __(Optional Language: en-BR)__
-
-
-
-
-<br />
-
-
-
-
-```sh
-$ ruby start.rb en-BR
-```
-
-
-
-
-<br />
-
-
-
-
 # Troubleshooting
 
 
@@ -105,20 +83,6 @@ This simple project has an important meaning, as it has served me both for techn
 
 ```sh
 $ ruby start.rb
-```
-
-
-<br />
-
-
-4. __(Optional Language: en-BR)__
-
-
-<br />
-
-
-```sh
-$ ruby start.rb en-BR
 ```
 
 
