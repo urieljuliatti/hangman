@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Entities
-  # Responsável pelas questões visuais: cores e o que é disposto em tela
+  # Responsible for visual aspects: colors and what is displayed on screen
   module Puppetable
     def mapped_puppet
       {

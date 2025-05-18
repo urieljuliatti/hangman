@@ -7,13 +7,6 @@
       "editor.tabSize": 2,
       "files.insertFinalNewline": true
   },
-  "rubyLsp.bundleGemfile": "/Users/urielvalle/Documents/GitHub/hangman/Gemfile",
-  "rubyLsp.rubyExecutablePath": "/Users/urielvalle/.rbenv/shims/ruby",
-  "rubyLsp.rubyVersionManager": {
-      "rbenvExecutablePath": "opt/homebrew/bin/rbenv",
-      "identifier": "rbenv"
-  },
-  "rubyLsp.formatter": "syntax_tree",
   "rubyLsp.enabledFeatures": {
     "codeActions": true,
     "diagnostics": true,
@@ -33,6 +26,5 @@
     "workspaceSymbol": true,
     "signatureHelp": true,
     "typeHierarchy": true
-  },
-  "rubocop.mode": "enableUnconditionally"
+  }
 }

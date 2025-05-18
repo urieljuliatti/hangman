@@ -2,7 +2,7 @@
 
 module UI
   module TextColor
-    # Aqui fica a coleção de métodos para a montagem e preparo das cores, backgrounds e modos
+    # Here is the collection of methods for assembling and preparing colors, backgrounds, and modes
     module ClassMethods
       COLOR_CODES = {
         default: 0,
@@ -26,7 +26,7 @@ module UI
         COLOR_CODES
       end
 
-      # Criando métodos de instância dinamicamente para as cores
+      # Dynamically creating instance methods for the colors
       def color_methods
         colors.each do |key|
           next if key == :default

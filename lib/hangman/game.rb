@@ -3,9 +3,9 @@
 module Hangman
   # @selected_topic_entity is an instance of TopicEntity
   class Game
-    include Entities::Keywordable # trata a keyword
-    include Entities::Displayable # monta o output do jogo
-    include Entities::Puppetable # monta o corpo do hangman
+    include Entities::Keywordable # handles the keyword
+    include Entities::Displayable # builds the game output
+    include Entities::Puppetable # builds the hangman body
 
     def initialize(selected_topic_entity)
       @selected_topic_entity = selected_topic_entity

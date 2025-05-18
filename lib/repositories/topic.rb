@@ -4,7 +4,7 @@ require_relative './repo_file'
 require_relative '../entities/topic'
 
 module Repositories
-  # Responsável por criar o tópico randomizado
+  # Responsible for creating the randomized topic
   class Topic
     def initialize(rspec_flag: false)
       @rspec_flag = rspec_flag

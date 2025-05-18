@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
+require 'dotenv/load'
 require 'i18n'
 require 'pry'
+
 
 I18n.load_path << Dir["#{File.expand_path('config/locales')}/*.yml"]
 I18n.default_locale = ARGV.empty? ? :en : ARGV[0].to_sym
@@ -16,3 +18,4 @@ require './lib/repositories/topic'
 require './lib/repositories/repo_file'
 require './lib/entities/topic'
 require './lib/ui/text_color'
+require './lib/requests/auth'

@@ -10,6 +10,9 @@ gem 'i18n'
 # Development tools
 gem 'awesome_print'
 
+gem 'discogs-wrapper'
+gem 'dotenv'
+
 # Testing and quality
 gem 'fuubar'
 gem 'rubocop-lsp'

@@ -2,7 +2,7 @@
 
 module UI
   module TextColor
-    # Aqui encontra-se os métodos de instância para cada string, colorir, remover a cor, etc
+    # Here are the instance methods for each string: color, remove color, etc.
     module InstanceMethods
       # Método que colore
       def color(symbol)

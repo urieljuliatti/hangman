@@ -3,7 +3,7 @@
 require './lib/ui/emoji'
 
 module Entities
-  # Responsável pelas questões visuais: cores e o que é disposto em tela
+  # Responsible for visual aspects: colors and what is displayed on screen
   # Emojis: http://unicode.org/emoji/charts/full-emoji-list.html#1f469_1f3fb_200d_1f4bb
   module Displayable
     include UI::Emoji
