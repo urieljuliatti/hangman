@@ -26,5 +26,6 @@
     "workspaceSymbol": true,
     "signatureHelp": true,
     "typeHierarchy": true
-  }
+  },
+  "rubyLsp.rubyExecutablePath": "/Users/urielvalle/.rbenv/shims/ruby"
 }

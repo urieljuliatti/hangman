@@ -80,8 +80,10 @@ RSpec.describe Requests::Auth do # rubocop:disable Metrics/BlockLength
       allow(discogs).to receive(:get_artists_releases).and_return(releases)
       allow(discogs).to receive(:get_release).and_return(release_data)
       auth.authenticate
-      auth.instance_variable_set(:@list,
-                                 { 'wants' => [{ 'basic_information' => { 'artists' => [{ 'id' => '123' }] } }] })
+      auth.instance_variable_set(
+        :@list,
+        { 'wants' => [{ 'basic_information' => { 'artists' => [{ 'id' => '123' }] } }] }
+      )
     end
 
     it 'processes wantlist items' do
