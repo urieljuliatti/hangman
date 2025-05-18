@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-
-RSpec.describe Requests::Auth do
+RSpec.describe Requests::Auth do # rubocop:disable Metrics/BlockLength
   include_context 'requests context'
 
   subject(:auth) { described_class.new }
@@ -25,7 +24,7 @@ RSpec.describe Requests::Auth do
     end
   end
 
-  describe '#user_actions' do
+  describe '#user_actions' do # rubocop:disable Metrics/BlockLength
     let(:discogs) { instance_double(Discogs::Wrapper) }
     let(:user) { { 'username' => 'urieljuliatti' } }
     let(:wantlist) do

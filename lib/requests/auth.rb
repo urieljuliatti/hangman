@@ -43,6 +43,7 @@ module Requests
     def process_releases(releases)
       releases['releases'].each do |release|
         release_data = @discogs.get_release(release['id'].to_s)
+        puts "Isto é um release: #{release_data['tracklist']}"
       end
     end
   end
